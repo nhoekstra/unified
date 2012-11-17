@@ -5,7 +5,7 @@ A repository to store the high level prototype for CMPT363 User Interface Design
 
 Contributers:
 
-Narbeh Shahnazarian
-Reza Shariatzadeh
-Nicholas Hoekstra
+Narbeh Shahnazarian,
+Reza Shariatzadeh,
+Nicholas Hoekstra,
 Eric Ho
