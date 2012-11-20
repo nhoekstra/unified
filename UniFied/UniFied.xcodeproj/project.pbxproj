@@ -239,6 +239,7 @@
 				GCC_PREFIX_HEADER = "UniFied/UniFied-Prefix.pch";
 				INFOPLIST_FILE = "UniFied/UniFied-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -250,6 +251,7 @@
 				GCC_PREFIX_HEADER = "UniFied/UniFied-Prefix.pch";
 				INFOPLIST_FILE = "UniFied/UniFied-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -273,6 +275,7 @@
 				1F89E61516581A9800FBC6E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
