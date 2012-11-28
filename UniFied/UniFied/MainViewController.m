@@ -13,15 +13,18 @@
 @end
 
 @implementation MainViewController
+@synthesize logOut;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [logOut setEnabled:NO];
 	// Do any additional setup after loading the view.
 }
 
 - (void)viewDidUnload
 {
+    [self setLogOut:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

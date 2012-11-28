@@ -67,6 +67,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="vhU-KQ-zyB"/>
+                    <connections>
+                        <outlet property="logOut" destination="KkS-pH-knb" id="z0C-8c-C5Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsI-PF-Lwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
