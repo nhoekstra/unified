@@ -60,7 +60,33 @@
 }
 
 - (void)dismissKeyboard {
+    [titleText resignFirstResponder];
+    [authorText resignFirstResponder];
+    [isbnText resignFirstResponder];
+    [editionText resignFirstResponder];
+    [courseText resignFirstResponder];
+    [conditionText resignFirstResponder];
+    [commentText resignFirstResponder];
+}
+
+- (IBAction)createListing{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *title = [titleText text];
+    NSString *author =[authorText text];
+    NSString *isbn = [isbnText text];
+    NSString *edition = [editionText text];
+    NSString *course = [courseText text];
+    NSString *condition = [conditionText  text];
+    NSString *comment = [commentText  text];
     
+    [defaults setObject:title forKey:@"title"];
+    [defaults setObject:author forKey:@"author"];
+    [defaults setObject:isbn forKey:@"isbn"];
+    [defaults setObject:edition forKey:@"edition"];
+    [defaults setObject:course forKey:@"course"];
+    [defaults setObject:condition forKey:@"condition"];
+    [defaults setObject:comment forKey:@"comment"];
+    [defaults synchronize];
 }
 
 @end
