@@ -9,7 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @interface CreateListingViewController : UIViewController {
-    IBOutlet UITextView *textView;
+    UITapGestureRecognizer *tap;
+    IBOutlet UIImageView *imageThumbnail;
+
+    IBOutlet UITextField *titleText;
+    IBOutlet UITextField *authorText;
+    IBOutlet UITextField *isbnText;
+    IBOutlet UITextField *editionText;
+    IBOutlet UITextField *courseText;
+    IBOutlet UITextField *conditionText;
+    IBOutlet UITextView *commentText;
 }
+
+- (IBAction)backButton;
+- (void)dismissKeyboard;
 
 @end

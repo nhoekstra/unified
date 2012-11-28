@@ -28,17 +28,24 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+    // Loads the keyboard dismissal on tap outside textField
+    tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
-    // Used to edit UITextView's appearance
-    textView = [[UITextView alloc] initWithFrame:CGRectMake(50, 220, 200, 100)];
-    
-    // Change rounded corners
-    textView.layer.cornerRadius = 5;
-    textView.clipsToBounds = YES;
+    [self.view addGestureRecognizer:tap];
+    [tap setCancelsTouchesInView:NO]; // Allows other tap gestures to continue functioning while this one is in effect
 }
 
 - (void)viewDidUnload
 {
+    titleText = nil;
+    authorText = nil;
+    isbnText = nil;
+    editionText = nil;
+    courseText = nil;
+    conditionText = nil;
+    commentText = nil;
+    imageThumbnail = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -46,6 +53,14 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (IBAction)backButton {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)dismissKeyboard {
+    
 }
 
 @end

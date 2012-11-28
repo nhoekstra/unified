@@ -17,6 +17,7 @@
 		1F89E61A16581AF000FBC6E7 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F89E61916581AF000FBC6E7 /* Storyboard.storyboard */; };
 		1FEF1847165FF9BB00AB5405 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1846165FF9BB00AB5405 /* TPKeyboardAvoidingScrollView.m */; };
 		1FEF184F165FFD9A00AB5405 /* CreateListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF184E165FFD9A00AB5405 /* CreateListingViewController.m */; };
+		C98ACB111665B8EC00CF2A21 /* textbookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98ACB101665B8EC00CF2A21 /* textbookTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		1FEF1846165FF9BB00AB5405 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		1FEF184D165FFD9A00AB5405 /* CreateListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateListingViewController.h; sourceTree = "<group>"; };
 		1FEF184E165FFD9A00AB5405 /* CreateListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateListingViewController.m; sourceTree = "<group>"; };
+		C98ACB0F1665B8EC00CF2A21 /* textbookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textbookTableViewController.h; sourceTree = "<group>"; };
+		C98ACB101665B8EC00CF2A21 /* textbookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textbookTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				1FEF184D165FFD9A00AB5405 /* CreateListingViewController.h */,
 				1FEF184E165FFD9A00AB5405 /* CreateListingViewController.m */,
 				1F89E60616581A9800FBC6E7 /* Supporting Files */,
+				C98ACB0F1665B8EC00CF2A21 /* textbookTableViewController.h */,
+				C98ACB101665B8EC00CF2A21 /* textbookTableViewController.m */,
 			);
 			path = UniFied;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				1F89E61816581AD000FBC6E7 /* MainViewController.m in Sources */,
 				1FEF1847165FF9BB00AB5405 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				1FEF184F165FFD9A00AB5405 /* CreateListingViewController.m in Sources */,
+				C98ACB111665B8EC00CF2A21 /* textbookTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
