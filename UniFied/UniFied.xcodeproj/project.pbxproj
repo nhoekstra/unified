@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0A85061666947200FF2828 /* ViewListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A85051666947200FF2828 /* ViewListingViewController.m */; };
 		1F89E60016581A9800FBC6E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F89E5FF16581A9800FBC6E7 /* UIKit.framework */; };
 		1F89E60216581A9800FBC6E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F89E60116581A9800FBC6E7 /* Foundation.framework */; };
 		1F89E60416581A9800FBC6E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F89E60316581A9800FBC6E7 /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F0A85041666947200FF2828 /* ViewListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewListingViewController.h; sourceTree = "<group>"; };
+		1F0A85051666947200FF2828 /* ViewListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewListingViewController.m; sourceTree = "<group>"; };
 		1F89E5FB16581A9800FBC6E7 /* UniFied.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniFied.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F89E5FF16581A9800FBC6E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1F89E60116581A9800FBC6E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,6 +96,8 @@
 				1FEF1846165FF9BB00AB5405 /* TPKeyboardAvoidingScrollView.m */,
 				1F89E61716581AD000FBC6E7 /* MainViewController.m */,
 				1F89E61916581AF000FBC6E7 /* Storyboard.storyboard */,
+				1F0A85041666947200FF2828 /* ViewListingViewController.h */,
+				1F0A85051666947200FF2828 /* ViewListingViewController.m */,
 				1FEF184D165FFD9A00AB5405 /* CreateListingViewController.h */,
 				1FEF184E165FFD9A00AB5405 /* CreateListingViewController.m */,
 				1F89E60616581A9800FBC6E7 /* Supporting Files */,
@@ -182,6 +187,7 @@
 				1FEF1847165FF9BB00AB5405 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				1FEF184F165FFD9A00AB5405 /* CreateListingViewController.m in Sources */,
 				C98ACB111665B8EC00CF2A21 /* textbookTableViewController.m in Sources */,
+				1F0A85061666947200FF2828 /* ViewListingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
