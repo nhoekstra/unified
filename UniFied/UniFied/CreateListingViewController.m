@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-
+    
     // Loads the keyboard dismissal on tap outside textField
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
@@ -45,7 +45,8 @@
     courseText = nil;
     conditionText = nil;
     commentText = nil;
-    imageThumbnail = nil;
+    //imageView = nil;
+    //imageThumbnail = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -89,4 +90,33 @@
     [defaults synchronize];
 }
 
+-(IBAction)photoPicker
+{
+    //initialization of the picker
+    picker1 = [[UIImagePickerController alloc] init];
+    picker1.delegate = self;
+    
+    //we set the picker to reference the photolibrary
+    [picker1 setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    
+    //we present an animated transtion to the selceted modal view: photo library or camera.
+    [self presentViewController:picker1 animated:YES completion:Nil];
+    
+    
+}
+
+//here we allow the user to pick a photo from their photolibrary to display in their posting
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    
+    [self dismissViewControllerAnimated:YES completion:Nil];
+    [picker dismissModalViewControllerAnimated:YES];
+	imageThumbnail.image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+}
+
+//method to dismis the photo library after the photo has been chosen.
+-(void) imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:Nil];
+}
 @end
