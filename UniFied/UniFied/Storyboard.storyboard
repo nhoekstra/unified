@@ -293,7 +293,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="x3b-0I-2w1">
                                             <connections>
-                                                <action selector="doneButton" destination="F7T-Wm-Zmn" id="paE-XH-8HZ"/>
+                                                <action selector="doneButton" destination="F7T-Wm-Zmn" id="kwD-F1-qDg"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

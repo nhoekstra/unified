@@ -30,7 +30,7 @@
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSData *image = [defaults dataForKey:@"image"];
-    imageThumbnail = [UIImage imageWithData:image];
+    imageThumbnail.image = [UIImage imageWithData:image];
     titleText.text = [defaults objectForKey:@"title"];
     authorText.text = [defaults objectForKey:@"author"];
     isbnText.text = [defaults objectForKey:@"isbn"];
@@ -52,7 +52,8 @@
 }
 
 - (IBAction)doneButton {
-    [[[self parentViewController] parentViewController] dismissModalViewControllerAnimated:YES];
+    NSLog(@"We got to this method");
+    [[[self parentViewController] parentViewController] dismissModalViewControllerAnimated:YES]; 
 }
 
 - (IBAction)editButton {
