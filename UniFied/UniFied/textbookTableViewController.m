@@ -37,7 +37,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    totalStrings = [[NSMutableArray alloc] initWithObjects:@"Math Calculus", @"Discrete Math", @"History: the Western World", @"Poetry in motion", @"Algorithm Design", nil];
+    totalStrings = [[NSMutableArray alloc] initWithObjects:@"Math Calculus", @"Discrete Math", @"History: The Western World", @"Poetry in Motion", @"Algorithm Design", nil];
 }
 
 
@@ -139,5 +139,9 @@
     [self setTableView:nil];
     [self setSearchBar:nil];
     [super viewDidUnload];
+}
+
+- (IBAction)backButton {
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end

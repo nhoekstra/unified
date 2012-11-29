@@ -19,6 +19,9 @@
 {
     [super viewDidLoad];
     [logOut setEnabled:NO];
+    //self.view.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.jpg"]];
+    
 	// Do any additional setup after loading the view.
 }
 
