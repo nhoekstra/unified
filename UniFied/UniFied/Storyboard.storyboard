@@ -84,7 +84,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="mCk-Xf-dlz" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="-112" width="320" height="572"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="572"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="H0s-6x-bT4">
@@ -195,6 +195,9 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="photoPicker" destination="VKf-Zi-UHU" eventType="touchUpInside" id="Mfp-Ze-eGO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="77l-5x-CAH">
                                         <rect key="frame" x="15" y="521" width="291" height="37"/>
@@ -498,6 +501,7 @@
             <relationships>
                 <relationship kind="action" name="backButton"/>
                 <relationship kind="action" name="createListing"/>
+                <relationship kind="action" name="photoPicker"/>
                 <relationship kind="outlet" name="authorText" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="commentText" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="conditionText" candidateClass="UITextField"/>

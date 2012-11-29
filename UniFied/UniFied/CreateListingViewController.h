@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateListingViewController : UIViewController {
+@interface CreateListingViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
     UITapGestureRecognizer *tap;
     IBOutlet UIImageView *imageThumbnail;
 
@@ -19,8 +19,11 @@
     IBOutlet UITextField *courseText;
     IBOutlet UITextField *conditionText;
     IBOutlet UITextView *commentText;
+    
+    UIImagePickerController *picker1;
+    
 }
-
+-(IBAction)photoPicker;
 - (IBAction)backButton;
 - (void)dismissKeyboard;
 - (IBAction)createListing;
