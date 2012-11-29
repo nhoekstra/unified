@@ -92,6 +92,11 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
+        //cell.textLabel.backgroundColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:1];
+        cell.textLabel.textColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+        //cell.detailTextLabel.backgroundColor = [UIColor colorWithRed:0 green:1 blue:1 alpha:1];
+        //cell.detailTextLabel.textColor =  [UIColor colorWithRed:1 green:0 blue:1 alpha:1];
     }
     
     if(!isFitered)

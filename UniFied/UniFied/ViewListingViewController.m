@@ -7,6 +7,8 @@
 //
 
 #import "ViewListingViewController.h"
+#import "CreateListingViewController.h"
+#import "textbookTableViewController.h"
 
 @interface ViewListingViewController ()
 
@@ -52,8 +54,7 @@
 }
 
 - (IBAction)doneButton {
-    NSLog(@"We got to this method");
-    [[[self parentViewController] parentViewController] dismissModalViewControllerAnimated:YES]; 
+    [[[self presentingViewController] presentingViewController] dismissModalViewControllerAnimated:YES];
 }
 
 - (IBAction)editButton {
