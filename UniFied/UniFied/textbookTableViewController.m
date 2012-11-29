@@ -91,6 +91,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     if(!isFitered)

@@ -29,11 +29,56 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [scroller setContentSize:CGSizeMake(320, 585)];
+    
     // Loads the keyboard dismissal on tap outside textField
     tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
     [tap setCancelsTouchesInView:NO]; // Allows other tap gestures to continue functioning while this one is in effect
+    
+    
+    
+    
+    //[titleText setDelegate:self];
+    [titleText setReturnKeyType:UIReturnKeyDone];
+    [titleText addTarget:self
+                       action:@selector(textFieldFinished:)
+             forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    //[authorText setDelegate:self];
+    [authorText setReturnKeyType:UIReturnKeyDone];
+    [authorText addTarget:self
+                  action:@selector(textFieldFinished:)
+        forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    //[isbnText setDelegate:self];
+    [isbnText setReturnKeyType:UIReturnKeyDone];
+    [isbnText addTarget:self
+                  action:@selector(textFieldFinished:)
+        forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    //[editionText setDelegate:self];
+    [editionText setReturnKeyType:UIReturnKeyDone];
+    [editionText addTarget:self
+                  action:@selector(textFieldFinished:)
+        forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    //[courseText setDelegate:self];
+    [courseText setReturnKeyType:UIReturnKeyDone];
+    [courseText addTarget:self
+                  action:@selector(textFieldFinished:)
+        forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    //[conditionText setDelegate:self];
+    [conditionText setReturnKeyType:UIReturnKeyDone];
+    [conditionText addTarget:self
+                  action:@selector(textFieldFinished:)
+            forControlEvents:UIControlEventEditingDidEndOnExit];
+}
+
+- (IBAction)textFieldFinished:(id)sender {
+    // [sender resignFirstResponder];
 }
 
 - (void)viewDidUnload
@@ -47,6 +92,7 @@
     commentText = nil;
     //imageView = nil;
     //imageThumbnail = nil;
+    scroller = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -71,6 +117,8 @@
 }
 
 - (IBAction)createListing{
+    [self dismissKeyboard];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *title = [titleText text];
     NSString *author =[authorText text];
@@ -79,6 +127,12 @@
     NSString *course = [courseText text];
     NSString *condition = [conditionText  text];
     NSString *comment = [commentText  text];
+    UIImage *storeImage = imageThumbnail.image;
+    NSData *image = UIImageJPEGRepresentation(storeImage, 100);
+    
+    if ([comment isEqualToString:@"Add any comments here."]) {
+        comment = nil;
+    }
     
     [defaults setObject:title forKey:@"title"];
     [defaults setObject:author forKey:@"author"];
@@ -87,6 +141,8 @@
     [defaults setObject:course forKey:@"course"];
     [defaults setObject:condition forKey:@"condition"];
     [defaults setObject:comment forKey:@"comment"];
+    [defaults setObject:image forKey:@"image"];
+    
     [defaults synchronize];
 }
 

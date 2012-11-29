@@ -21,11 +21,12 @@
     IBOutlet UITextView *commentText;
     
     UIImagePickerController *picker1;
-    
+    IBOutlet UIScrollView *scroller;
 }
--(IBAction)photoPicker;
+- (IBAction)photoPicker;
 - (IBAction)backButton;
 - (void)dismissKeyboard;
 - (IBAction)createListing;
+- (IBAction)textFieldFinished:(id)sender;
 
 @end
