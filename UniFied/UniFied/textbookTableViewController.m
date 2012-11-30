@@ -44,7 +44,7 @@
     self.tableView.dataSource = self;
     
     //manually fill our table
-    totalStrings = [[NSMutableArray alloc] initWithObjects:@"Math Calculus", @"Discrete Math", @"History: The Western World", @"Poetry in Motion", @"Algorithm Design", nil];
+    totalStrings = [[NSMutableArray alloc] initWithObjects:@"Math Calculus", @"Discrete Math", @"History: The Western World", @"Understanding Poetry", @"Algorithm Design", @"myPosting", nil];
 }
 
 //This method is to handle the event where the user is searching in the search bar for a book

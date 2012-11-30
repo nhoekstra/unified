@@ -98,11 +98,11 @@
             </objects>
             <point key="canvasLocation" x="-821" y="-40"/>
         </scene>
-        <!--My Listing View Controller-->
+        <!--Create Listing View Controller-->
         <scene sceneID="zr7-HQ-AQg">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3F-dV-XKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="nKO-Vb-LSb" customClass="MyListingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myPosting" id="nKO-Vb-LSb" customClass="CreateListingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GrX-wM-C09">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -644,8 +644,8 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="gCt-jY-tvm">
-                                <rect key="frame" x="0.0" y="46" width="320" height="414"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="textbok_listing_Calculus.png" id="gCt-jY-tvm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="414"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -664,8 +664,8 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="NZz-HO-ANR">
-                                <rect key="frame" x="0.0" y="46" width="320" height="414"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="textbok_listing_Discrete.png" id="NZz-HO-ANR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="414"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -684,8 +684,8 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="BAu-3V-yRf">
-                                <rect key="frame" x="0.0" y="46" width="320" height="414"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="textbok_listing_Algorithm_Design.png" id="BAu-3V-yRf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="414"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -699,13 +699,13 @@
         <!--View Controller - book4-->
         <scene sceneID="i0k-br-eYl">
             <objects>
-                <viewController storyboardIdentifier="Poetry in Motion" title="book4" id="Ody-bl-FN3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Understanding Poetry" title="book4" id="Ody-bl-FN3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pFA-Fc-oEu">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="3cT-Ha-GzK">
-                                <rect key="frame" x="0.0" y="46" width="320" height="414"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="textbok_listing_poetry.png" id="3cT-Ha-GzK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="414"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -724,8 +724,8 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="PM4-RT-7Ys">
-                                <rect key="frame" x="0.0" y="46" width="320" height="414"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="textbok_listing_History.png" id="PM4-RT-7Ys">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="414"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -737,6 +737,13 @@
             <point key="canvasLocation" x="668" y="570"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="textbok_listing_Algorithm_Design.png" width="296" height="404"/>
+        <image name="textbok_listing_Calculus.png" width="292" height="400"/>
+        <image name="textbok_listing_Discrete.png" width="295" height="404"/>
+        <image name="textbok_listing_History.png" width="292" height="400"/>
+        <image name="textbok_listing_poetry.png" width="297" height="400"/>
+    </resources>
     <classes>
         <class className="CreateListingViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CreateListingViewController.h"/>
@@ -761,9 +768,6 @@
             <relationships>
                 <relationship kind="outlet" name="logOut" candidateClass="UIBarButtonItem"/>
             </relationships>
-        </class>
-        <class className="MyListingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyListingViewController.h"/>
         </class>
         <class className="TPKeyboardAvoidingScrollView" superclassName="UIScrollView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TPKeyboardAvoidingScrollView.h"/>
