@@ -129,6 +129,7 @@
     NSString *comment = [commentText  text];
     UIImage *storeImage = imageThumbnail.image;
     NSData *image = UIImageJPEGRepresentation(storeImage, 100);
+    bool postCreated = TRUE;
     
     if ([comment isEqualToString:@"Add any comments here."]) {
         comment = nil;
@@ -142,6 +143,7 @@
     [defaults setObject:condition forKey:@"condition"];
     [defaults setObject:comment forKey:@"comment"];
     [defaults setObject:image forKey:@"image"];
+    [defaults setBool:postCreated forKey:@"postCreated"];
     
     [defaults synchronize];
 }
