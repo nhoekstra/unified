@@ -21,6 +21,11 @@
 		1FEF1847165FF9BB00AB5405 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF1846165FF9BB00AB5405 /* TPKeyboardAvoidingScrollView.m */; };
 		1FEF184F165FFD9A00AB5405 /* CreateListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FEF184E165FFD9A00AB5405 /* CreateListingViewController.m */; };
 		C98ACB111665B8EC00CF2A21 /* textbookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C98ACB101665B8EC00CF2A21 /* textbookTableViewController.m */; };
+		F14CDD42166926BD00740054 /* textbok_listing_Algorithm_Design.png in Resources */ = {isa = PBXBuildFile; fileRef = F14CDD3D166926BD00740054 /* textbok_listing_Algorithm_Design.png */; };
+		F14CDD43166926BD00740054 /* textbok_listing_Calculus.png in Resources */ = {isa = PBXBuildFile; fileRef = F14CDD3E166926BD00740054 /* textbok_listing_Calculus.png */; };
+		F14CDD44166926BD00740054 /* textbok_listing_Discrete.png in Resources */ = {isa = PBXBuildFile; fileRef = F14CDD3F166926BD00740054 /* textbok_listing_Discrete.png */; };
+		F14CDD45166926BD00740054 /* textbok_listing_History.png in Resources */ = {isa = PBXBuildFile; fileRef = F14CDD40166926BD00740054 /* textbok_listing_History.png */; };
+		F14CDD46166926BD00740054 /* textbok_listing_poetry.png in Resources */ = {isa = PBXBuildFile; fileRef = F14CDD41166926BD00740054 /* textbok_listing_poetry.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		1FEF184E165FFD9A00AB5405 /* CreateListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateListingViewController.m; sourceTree = "<group>"; };
 		C98ACB0F1665B8EC00CF2A21 /* textbookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textbookTableViewController.h; sourceTree = "<group>"; };
 		C98ACB101665B8EC00CF2A21 /* textbookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textbookTableViewController.m; sourceTree = "<group>"; };
+		F14CDD3D166926BD00740054 /* textbok_listing_Algorithm_Design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textbok_listing_Algorithm_Design.png; sourceTree = "<group>"; };
+		F14CDD3E166926BD00740054 /* textbok_listing_Calculus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textbok_listing_Calculus.png; sourceTree = "<group>"; };
+		F14CDD3F166926BD00740054 /* textbok_listing_Discrete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textbok_listing_Discrete.png; sourceTree = "<group>"; };
+		F14CDD40166926BD00740054 /* textbok_listing_History.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textbok_listing_History.png; sourceTree = "<group>"; };
+		F14CDD41166926BD00740054 /* textbok_listing_poetry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textbok_listing_poetry.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +128,11 @@
 		1F89E60616581A9800FBC6E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F14CDD3D166926BD00740054 /* textbok_listing_Algorithm_Design.png */,
+				F14CDD3E166926BD00740054 /* textbok_listing_Calculus.png */,
+				F14CDD3F166926BD00740054 /* textbok_listing_Discrete.png */,
+				F14CDD40166926BD00740054 /* textbok_listing_History.png */,
+				F14CDD41166926BD00740054 /* textbok_listing_poetry.png */,
 				1F89E60716581A9800FBC6E7 /* UniFied-Info.plist */,
 				1F89E60816581A9800FBC6E7 /* InfoPlist.strings */,
 				1F89E60B16581A9800FBC6E7 /* main.m */,
@@ -180,6 +195,11 @@
 				1F89E60A16581A9800FBC6E7 /* InfoPlist.strings in Resources */,
 				1F89E61A16581AF000FBC6E7 /* Storyboard.storyboard in Resources */,
 				1F0F710C1666EAF100D70861 /* background.jpg in Resources */,
+				F14CDD42166926BD00740054 /* textbok_listing_Algorithm_Design.png in Resources */,
+				F14CDD43166926BD00740054 /* textbok_listing_Calculus.png in Resources */,
+				F14CDD44166926BD00740054 /* textbok_listing_Discrete.png in Resources */,
+				F14CDD45166926BD00740054 /* textbok_listing_History.png in Resources */,
+				F14CDD46166926BD00740054 /* textbok_listing_poetry.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

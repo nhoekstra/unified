@@ -10,8 +10,12 @@
 
 @interface textbookTableViewController ()
 {
+    //we initialize our array's to hold our table information.
     NSMutableArray *totalStrings;
+    
+    //this array is for filtering out the table once the user tries to search via the search bar.
     NSMutableArray *filterStrings;
+    
     BOOL isFitered;
 
 }
@@ -33,14 +37,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //initialize delagates and datasource
     self.searchBar.delegate = self;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    //manually fill our table
     totalStrings = [[NSMutableArray alloc] initWithObjects:@"Math Calculus", @"Discrete Math", @"History: The Western World", @"Poetry in Motion", @"Algorithm Design", nil];
 }
 
-
+//This method is to handle the event where the user is searching in the search bar for a book
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
     if (searchText.length == 0)
@@ -52,6 +59,7 @@
         isFitered = YES;
         filterStrings = [[NSMutableArray alloc] init];
         
+        //parse what the user ahs typed
         for (NSString *str in totalStrings) {
             NSRange stringRange = [str rangeOfString:searchText options:NSCaseInsensitiveSearch];
             
@@ -61,16 +69,19 @@
             }
         }
     }
+    
+    //we reload the table dat in the end to refresh out view
     [self.tableView reloadData];
 }
 
+//method to handle the dismissing of the keyboard
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self.searchBar resignFirstResponder];
     
 }
 
-
+//method to return the number of rows in our table
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
@@ -85,6 +96,7 @@
     }
 }
 
+//method to handle setting up our table view with our array and the approproate text for each cell.
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"cell";
@@ -113,6 +125,7 @@
     
 }
 
+//method to handle the selection of a row in the table and how to transition to the appropriate page.
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *curCell = [tableView cellForRowAtIndexPath:indexPath];
