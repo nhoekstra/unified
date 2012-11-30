@@ -7,6 +7,7 @@
 //
 
 #import "CreateListingViewController.h"
+#import "textbookTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface CreateListingViewController ()
@@ -28,7 +29,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
     [scroller setContentSize:CGSizeMake(320, 585)];
     
     // Loads the keyboard dismissal on tap outside textField
@@ -131,6 +131,12 @@
     NSData *image = UIImageJPEGRepresentation(storeImage, 100);
     bool postCreated = TRUE;
     
+    //create an instace of enableDisableData 
+    enableDisableData *obj=[enableDisableData getInstance];
+    
+    //update the bool with the value from post created.
+    obj.isDoneMakingPost = postCreated;
+    
     if ([comment isEqualToString:@"Add any comments here."]) {
         comment = nil;
     }
@@ -146,6 +152,7 @@
     [defaults setBool:postCreated forKey:@"postCreated"];
     
     [defaults synchronize];
+  //  NSLog(@"my new bool is: %d", test.isDoneMakingPost);
 }
 
 -(IBAction)photoPicker

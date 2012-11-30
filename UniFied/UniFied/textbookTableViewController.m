@@ -17,12 +17,17 @@
     NSMutableArray *filterStrings;
     
     BOOL isFitered;
+    
+    
 
 }
 
 @end
 
 @implementation textbookTableViewController
+
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,7 +47,7 @@
     self.searchBar.delegate = self;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
+
     //manually fill our table
     totalStrings = [[NSMutableArray alloc] initWithObjects:@"Math Calculus", @"Discrete Math", @"History: The Western World", @"Understanding Poetry", @"Algorithm Design", @"Java Walls and Mirrors", nil];
 }
@@ -121,6 +126,31 @@
         cell.textLabel.text = [filterStrings objectAtIndex:indexPath.row];
     }
     
+    //our object to check uf the new listing has been created
+    enableDisableData *obj=[enableDisableData getInstance];
+    
+    //if the java book posting has not been created then we hide the row from the user
+    if (cell.textLabel.text == @"Java Walls and Mirrors" && obj.isDoneMakingPost == NO)
+    {
+        cell.textLabel.hidden = YES;
+        cell.textLabel.enabled = NO;
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.userInteractionEnabled = NO;
+    }
+    
+    //the posting has been created so we make the java posting appear.
+    else
+    {
+        cell.textLabel.hidden = NO;
+        cell.textLabel.enabled = YES;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+        cell.userInteractionEnabled = YES;
+    
+    }
+ //   NSLog(@"my bool is: %d", obj.isDoneMakingPost);
+    
     return cell;
     
 }
@@ -136,6 +166,7 @@
     [curCell setSelected:NO animated:YES];
     [self.navigationController pushViewController:myView animated:YES];
     
+    
 }
 
 
@@ -144,7 +175,14 @@
     return 1;
 }
 
-
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    enableDisableData *obj=[enableDisableData getInstance];
+    // rows in section 6 should not be selectable
+    if (obj.isDoneMakingPost == NO && indexPath.row == 5) return nil;
+    
+    // By default, allow row to be selected
+    return indexPath;
+}
 
 
 
@@ -158,9 +196,18 @@
     [self setTableView:nil];
     [self setSearchBar:nil];
     [super viewDidUnload];
+
+}
+
+//reload the data table after the new posting has been created.
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+
 }
 
 - (IBAction)backButton {
+    
     [self dismissModalViewControllerAnimated:YES];
 }
 @end
