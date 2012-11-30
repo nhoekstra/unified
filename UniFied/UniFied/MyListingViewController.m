@@ -27,6 +27,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *image = [defaults dataForKey:@"image"];
+    imageThumbnail.image = [UIImage imageWithData:image];
+    titleText.text = [defaults objectForKey:@"title"];
+    authorText.text = [defaults objectForKey:@"author"];
+    isbnText.text = [defaults objectForKey:@"isbn"];
+    editionText.text = [defaults objectForKey:@"edition"];
+    courseText.text = [defaults objectForKey:@"course"];
+    conditionText.text = [defaults objectForKey:@"condition"];
+    commentText.text = [defaults objectForKey:@"comment"];
 }
 
 - (void)viewDidUnload

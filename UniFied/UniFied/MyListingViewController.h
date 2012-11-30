@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyListingViewController : UIViewController
+@interface MyListingViewController : UIViewController {
+    IBOutlet UIImageView *imageThumbnail;
+    
+    IBOutlet UILabel *titleText;
+    IBOutlet UILabel *authorText;
+    IBOutlet UILabel *isbnText;
+    IBOutlet UILabel *editionText;
+    IBOutlet UILabel *courseText;
+    IBOutlet UILabel *conditionText;
+    IBOutlet UITextView *commentText;
+}
 
 @end
